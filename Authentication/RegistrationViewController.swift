@@ -20,6 +20,10 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     var docRef: DocumentReference!
+    var studentCount: Int = 0
+    var studentArrayCount: String = ""
+    var facultyCount: Int = 0
+    var facultyArrayCount: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +68,9 @@ class RegistrationViewController: UIViewController {
             guard let nameField = self.nameTF.text,!nameField.isEmpty else { return }
             guard let branchField = self.branchTF.text,!branchField.isEmpty else { return }
             let userType = "Student"
-            let dataToSave: [String: Any] = ["uid":authResult?.user.uid,"email":emailField,"password": passwordField,"name": nameField,"branch": branchField,"userType": userType]
+            self.studentCount = self.studentCount + 1
+            self.studentArrayCount = String(self.studentCount)
+            let dataToSave: [String: Any] = ["uid":authResult?.user.uid,"email":emailField,"password": passwordField,"name": nameField,"branch": branchField,"userType": userType, "studentArrayCount": self.studentArrayCount]
             self.docRef.collection("createUser_StudentData").addDocument(data: dataToSave){ (error) in
                 if let error = error {
                     print("Error", error.localizedDescription)
@@ -72,14 +78,15 @@ class RegistrationViewController: UIViewController {
                     UserDefaults.standard.set(true, forKey: "userTypeStudent")
                     print("Data has been saved")
                     print(" Student user signs up successfully")
-                    self.showAlert(title: "Success", message: "Student user signs up successfully")
+                    
                    
                     //To naviate to next screen
                     var rootvc : UIViewController?
-                    rootvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! LoginViewController
+                    rootvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
                     let window = UIApplication.shared.windows.first
                     window?.rootViewController = rootvc
                     window?.makeKeyAndVisible()
+                    self.showAlert(title: "Success", message: "Student user signs up successfully")
                     }
                 }
             }
@@ -111,7 +118,9 @@ class RegistrationViewController: UIViewController {
              guard let nameField = self.nameTF.text,!nameField.isEmpty else { return }
              guard let branchField = self.branchTF.text,!branchField.isEmpty else { return }
              let userType = "Faculty"
-             let dataToSave: [String: Any] = ["uid":authResult?.user.uid,"email":emailField,"password": passwordField,"name": nameField,"branch": branchField,"userType": userType]
+             self.facultyCount = self.facultyCount + 1
+             self.facultyArrayCount = String(self.facultyCount)
+             let dataToSave: [String: Any] = ["uid":authResult?.user.uid,"email":emailField,"password": passwordField,"name": nameField,"branch": branchField,"userType": userType, "facultyArrayCount": self.facultyArrayCount]
              self.docRef.collection("createUser_FacultyData").addDocument(data: dataToSave){ (error) in
                  if let error = error {
                      print("Error", error.localizedDescription)
@@ -123,7 +132,7 @@ class RegistrationViewController: UIViewController {
                      
                     //To naviate to next screen
                      var rootvc : UIViewController?
-                     rootvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! LoginViewController
+                     rootvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
                      let window = UIApplication.shared.windows.first
                      window?.rootViewController = rootvc
                      window?.makeKeyAndVisible()
@@ -132,7 +141,6 @@ class RegistrationViewController: UIViewController {
              }
          }//else end
     }//creatUser_Faculty function end
-    
     
     func validateUserFields() {
         var isValid = true
@@ -168,15 +176,50 @@ class RegistrationViewController: UIViewController {
                 switch segmentedControl.selectedSegmentIndex
                 {
                     case 0:
+                        fetchListFaculty()
                         createUser_Faculty()
                     case 1:
+                        fetchListStudent()
                         createUser_Student()
+                    
                     default:
                     break
                 }
              }
         }
     
+    //To fetch the snapshot and get the latest count for faculty user
+    func fetchListFaculty() {
+             let docRef = Firestore.firestore().document("sampleData/CreateUser")
+              docRef.collection("createUser_FacultyData").getDocuments{ (docSnapshot, error) in
+                   if error == nil {
+                      let myData = docSnapshot!.documents as [QueryDocumentSnapshot]
+                      for data in myData {
+                          let myFacultyEmail = data["email"] as! String
+                          self.facultyArrayCount = data["facultyArrayCount"] as! String
+                          self.facultyCount = Int(self.facultyArrayCount)!
+                          print(self.facultyCount)
+                      }
+                   }
+              }
+      }//end fetchList()
+    
+     //To fetch the snapshot and get the latest count for student user
+    func fetchListStudent() {
+             let docRef = Firestore.firestore().document("sampleData/CreateUser")
+              docRef.collection("createUser_StudentData").getDocuments{ (docSnapshot, error) in
+                   if error == nil {
+                      let myData = docSnapshot!.documents as [QueryDocumentSnapshot]
+                      for data in myData {
+                          let myStudentEmail = data["email"] as! String
+                          self.studentArrayCount = data["studentArrayCount"] as! String
+                          self.studentCount = Int(self.studentArrayCount)!
+                          print(self.studentCount)
+                      }
+                   }
+              }
+      }//end fetchList()
+      
     //General method used to show alert
     func showAlert(title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

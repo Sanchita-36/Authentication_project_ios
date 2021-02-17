@@ -25,6 +25,7 @@ class LoginViewController: UIViewController
     var register: RegistrationViewController!
     var myFacultyEmail: String = ""
     var myStudentEmail :String = ""
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +34,6 @@ class LoginViewController: UIViewController
             UserDefaults.standard.set(false, forKey: "userTypeStudent")
             fetchListFaculty()
         }
-        
-        
         
         //rounding only bottom corners of a logo
         logo_felix.layer.cornerRadius = 30.0
@@ -123,18 +122,17 @@ class LoginViewController: UIViewController
                     print("Error",error?.localizedDescription as Any)
                 }else {
                     print("User signs in successfully")
-                    
                     //Firestore data storing
-                        guard let emailField = self.emailTextField.text,!emailField.isEmpty else { return }
-                        guard let passwordField = self.passwordTextField.text,!passwordField.isEmpty else { return }
+                    guard let emailField = self.emailTextField.text,!emailField.isEmpty else { return }
+                    guard let passwordField = self.passwordTextField.text,!passwordField.isEmpty else { return }
                     let dataToSave: [String: Any] = ["uid":result?.user.uid,"email":emailField,"password": passwordField]
-                        self.docRef.collection("loginDataFaculty").addDocument(data: dataToSave){ (error) in
-                            if let error = error {
-                                print("Error", error.localizedDescription)
-                            }else{
-                                print("Data has been saved")
-                            }
+                    self.docRef.collection("loginDataFaculty").addDocument(data: dataToSave){ (error) in
+                        if let error = error {
+                            print("Error", error.localizedDescription)
+                        }else{
+                            print("Data has been saved")
                         }
+                    }
                    //code added to show the screens as per users login logout status
                     UserDefaults.standard.set(true, forKey: "status") //To store data
                     Switcher.updateRootVC()
@@ -143,26 +141,25 @@ class LoginViewController: UIViewController
     }
 
     func loginForStudent(){
-           Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (result, error) in
-                   if error != nil {
-                       let alert = UIAlertController(title: "Please enter valid creds", message: "Check email and password", preferredStyle: .alert)
-                       self.present(alert, animated: true)
-                       alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
-                       print("Error",error?.localizedDescription as Any)
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (result, error) in
+                if error != nil {
+                    let alert = UIAlertController(title: "Please enter valid creds", message: "Check email and password", preferredStyle: .alert)
+                    self.present(alert, animated: true)
+                    alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+                    print("Error",error?.localizedDescription as Any)
                    }else {
                        print("User signs in successfully")
-                       
-                       //Firestore data storing
-                           guard let emailField = self.emailTextField.text,!emailField.isEmpty else { return }
-                           guard let passwordField = self.passwordTextField.text,!passwordField.isEmpty else { return }
-                           let dataToSave: [String: Any] = ["email":emailField,"password": passwordField]
-                           self.docRef.collection("loginDataStudent").addDocument(data: dataToSave){ (error) in
-                               if let error = error {
-                                   print("Error", error.localizedDescription)
-                               }else {
-                                   print("Data has been saved")
-                               }
-                           }
+                    //Firestore data storing
+                        guard let emailField = self.emailTextField.text,!emailField.isEmpty else { return }
+                        guard let passwordField = self.passwordTextField.text,!passwordField.isEmpty else { return }
+                        let dataToSave: [String: Any] = ["email":emailField,"password": passwordField]
+                        self.docRef.collection("loginDataStudent").addDocument(data: dataToSave){ (error) in
+                            if let error = error {
+                                print("Error", error.localizedDescription)
+                            }else {
+                                print("Data has been saved")
+                            }
+                        }
                       //code added to show the screens as per users login logout status
                        UserDefaults.standard.set(true, forKey: "status") //To store data
                        Switcher.updateRootVC()

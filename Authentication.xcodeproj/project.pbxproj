@@ -10,6 +10,13 @@
 		040C15D325A2F69600C52B69 /* Authentication_TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040C15D225A2F69600C52B69 /* Authentication_TabBarViewController.swift */; };
 		04103C8F25A389C6003F952A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04103C8E25A389C6003F952A /* HomeViewController.swift */; };
 		0416D4DB25A040CB00F335C2 /* Switcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416D4DA25A040CB00F335C2 /* Switcher.swift */; };
+		0444AA3025CADA9B00086E8C /* StudentCountCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444AA2F25CADA9B00086E8C /* StudentCountCollectionViewController.swift */; };
+		0448937A25D16294000CD408 /* BatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448937925D16294000CD408 /* BatchViewController.swift */; };
+		0448937C25D162F3000CD408 /* DatabaseReferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448937B25D162F3000CD408 /* DatabaseReferenceManager.swift */; };
+		0448937E25D16662000CD408 /* DataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448937D25D16662000CD408 /* DataHolder.swift */; };
+		0448938025D1668F000CD408 /* Batch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448937F25D1668F000CD408 /* Batch.swift */; };
+		0448938225D166A1000CD408 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448938125D166A1000CD408 /* User.swift */; };
+		0448938425D166E2000CD408 /* MyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448938325D166E2000CD408 /* MyDelegate.swift */; };
 		047277BC25C2AE0D0021B1B6 /* CreateBatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047277BB25C2AE0D0021B1B6 /* CreateBatchViewController.swift */; };
 		047C21B025B84FD600740ED8 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C21AF25B84FD600740ED8 /* RegistrationViewController.swift */; };
 		047EEE212599B8B60003265F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047EEE202599B8B60003265F /* AppDelegate.swift */; };
@@ -18,10 +25,11 @@
 		047EEE282599B8B60003265F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047EEE262599B8B60003265F /* Main.storyboard */; };
 		047EEE2A2599B8B80003265F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047EEE292599B8B80003265F /* Assets.xcassets */; };
 		047EEE2D2599B8B80003265F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047EEE2B2599B8B80003265F /* LaunchScreen.storyboard */; };
-		0489312025B03E2100984F1C /* Batch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489311F25B03E2100984F1C /* Batch.swift */; };
+		04C3841525DBAB43009EC166 /* AddTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3841425DBAB43009EC166 /* AddTopicViewController.swift */; };
+		04C3841725DCFE75009EC166 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3841625DCFE75009EC166 /* ProfileViewController.swift */; };
+		04C3841925DCFFD9009EC166 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3841825DCFFD9009EC166 /* ChangePasswordViewController.swift */; };
 		04E1A18A259B1A9200AD8B13 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04E1A189259B1A9200AD8B13 /* GoogleService-Info.plist */; };
-		04E4123F25A44457005066CB /* BatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4123E25A44457005066CB /* BatchesTableViewController.swift */; };
-		04F3042225BECEE900A1A58F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F3042125BECEE900A1A58F /* User.swift */; };
+		04E8BB7A25D69463005E6347 /* BatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E8BB7925D69463005E6347 /* BatchTableViewCell.swift */; };
 		219DE62520B41511936AC3A1 /* Pods_Authentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2578B20EFD5956AB8DCAA36A /* Pods_Authentication.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +37,13 @@
 		040C15D225A2F69600C52B69 /* Authentication_TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication_TabBarViewController.swift; sourceTree = "<group>"; };
 		04103C8E25A389C6003F952A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0416D4DA25A040CB00F335C2 /* Switcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher.swift; sourceTree = "<group>"; };
+		0444AA2F25CADA9B00086E8C /* StudentCountCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCountCollectionViewController.swift; sourceTree = "<group>"; };
+		0448937925D16294000CD408 /* BatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchViewController.swift; sourceTree = "<group>"; };
+		0448937B25D162F3000CD408 /* DatabaseReferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseReferenceManager.swift; sourceTree = "<group>"; };
+		0448937D25D16662000CD408 /* DataHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHolder.swift; sourceTree = "<group>"; };
+		0448937F25D1668F000CD408 /* Batch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Batch.swift; sourceTree = "<group>"; };
+		0448938125D166A1000CD408 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0448938325D166E2000CD408 /* MyDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDelegate.swift; sourceTree = "<group>"; };
 		047277BB25C2AE0D0021B1B6 /* CreateBatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBatchViewController.swift; sourceTree = "<group>"; };
 		047C21AF25B84FD600740ED8 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		047EEE1D2599B8B60003265F /* Authentication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Authentication.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,10 +54,11 @@
 		047EEE292599B8B80003265F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		047EEE2C2599B8B80003265F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		047EEE2E2599B8B80003265F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0489311F25B03E2100984F1C /* Batch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Batch.swift; sourceTree = "<group>"; };
+		04C3841425DBAB43009EC166 /* AddTopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTopicViewController.swift; sourceTree = "<group>"; };
+		04C3841625DCFE75009EC166 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		04C3841825DCFFD9009EC166 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		04E1A189259B1A9200AD8B13 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		04E4123E25A44457005066CB /* BatchesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchesTableViewController.swift; sourceTree = "<group>"; };
-		04F3042125BECEE900A1A58F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		04E8BB7925D69463005E6347 /* BatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchTableViewCell.swift; sourceTree = "<group>"; };
 		2578B20EFD5956AB8DCAA36A /* Pods_Authentication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Authentication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98645DEB9D3EA839F054D53E /* Pods-Authentication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Authentication.debug.xcconfig"; path = "Target Support Files/Pods-Authentication/Pods-Authentication.debug.xcconfig"; sourceTree = "<group>"; };
 		9AD833C081710F4F259BD8E5 /* Pods-Authentication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Authentication.release.xcconfig"; path = "Target Support Files/Pods-Authentication/Pods-Authentication.release.xcconfig"; sourceTree = "<group>"; };
@@ -60,6 +76,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0448937625D16198000CD408 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				0448937B25D162F3000CD408 /* DatabaseReferenceManager.swift */,
+				0448937D25D16662000CD408 /* DataHolder.swift */,
+				0448937F25D1668F000CD408 /* Batch.swift */,
+				0448938125D166A1000CD408 /* User.swift */,
+				0448938325D166E2000CD408 /* MyDelegate.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		047EEE142599B8B60003265F = {
 			isa = PBXGroup;
 			children = (
@@ -84,19 +112,23 @@
 				047EEE202599B8B60003265F /* AppDelegate.swift */,
 				047EEE222599B8B60003265F /* SceneDelegate.swift */,
 				047EEE242599B8B60003265F /* LoginViewController.swift */,
-				04103C8E25A389C6003F952A /* HomeViewController.swift */,
-				040C15D225A2F69600C52B69 /* Authentication_TabBarViewController.swift */,
-				047277BB25C2AE0D0021B1B6 /* CreateBatchViewController.swift */,
-				04E4123E25A44457005066CB /* BatchesTableViewController.swift */,
 				047C21AF25B84FD600740ED8 /* RegistrationViewController.swift */,
+				040C15D225A2F69600C52B69 /* Authentication_TabBarViewController.swift */,
+				04103C8E25A389C6003F952A /* HomeViewController.swift */,
+				047277BB25C2AE0D0021B1B6 /* CreateBatchViewController.swift */,
+				0444AA2F25CADA9B00086E8C /* StudentCountCollectionViewController.swift */,
+				0448937925D16294000CD408 /* BatchViewController.swift */,
+				04E8BB7925D69463005E6347 /* BatchTableViewCell.swift */,
+				04C3841425DBAB43009EC166 /* AddTopicViewController.swift */,
+				04C3841625DCFE75009EC166 /* ProfileViewController.swift */,
+				04C3841825DCFFD9009EC166 /* ChangePasswordViewController.swift */,
 				0416D4DA25A040CB00F335C2 /* Switcher.swift */,
-				04F3042125BECEE900A1A58F /* User.swift */,
-				0489311F25B03E2100984F1C /* Batch.swift */,
 				047EEE262599B8B60003265F /* Main.storyboard */,
-				047EEE292599B8B80003265F /* Assets.xcassets */,
 				047EEE2B2599B8B80003265F /* LaunchScreen.storyboard */,
 				047EEE2E2599B8B80003265F /* Info.plist */,
 				04E1A189259B1A9200AD8B13 /* GoogleService-Info.plist */,
+				047EEE292599B8B80003265F /* Assets.xcassets */,
+				0448937625D16198000CD408 /* New Group */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -234,17 +266,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0489312025B03E2100984F1C /* Batch.swift in Sources */,
+				0448938025D1668F000CD408 /* Batch.swift in Sources */,
+				04C3841525DBAB43009EC166 /* AddTopicViewController.swift in Sources */,
 				0416D4DB25A040CB00F335C2 /* Switcher.swift in Sources */,
 				04103C8F25A389C6003F952A /* HomeViewController.swift in Sources */,
 				047C21B025B84FD600740ED8 /* RegistrationViewController.swift in Sources */,
+				04C3841925DCFFD9009EC166 /* ChangePasswordViewController.swift in Sources */,
 				040C15D325A2F69600C52B69 /* Authentication_TabBarViewController.swift in Sources */,
+				04C3841725DCFE75009EC166 /* ProfileViewController.swift in Sources */,
+				0444AA3025CADA9B00086E8C /* StudentCountCollectionViewController.swift in Sources */,
+				0448938225D166A1000CD408 /* User.swift in Sources */,
+				0448937A25D16294000CD408 /* BatchViewController.swift in Sources */,
+				04E8BB7A25D69463005E6347 /* BatchTableViewCell.swift in Sources */,
+				0448938425D166E2000CD408 /* MyDelegate.swift in Sources */,
 				047EEE252599B8B60003265F /* LoginViewController.swift in Sources */,
+				0448937E25D16662000CD408 /* DataHolder.swift in Sources */,
 				047277BC25C2AE0D0021B1B6 /* CreateBatchViewController.swift in Sources */,
+				0448937C25D162F3000CD408 /* DatabaseReferenceManager.swift in Sources */,
 				047EEE212599B8B60003265F /* AppDelegate.swift in Sources */,
 				047EEE232599B8B60003265F /* SceneDelegate.swift in Sources */,
-				04F3042225BECEE900A1A58F /* User.swift in Sources */,
-				04E4123F25A44457005066CB /* BatchesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

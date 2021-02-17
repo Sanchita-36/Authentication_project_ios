@@ -20,10 +20,10 @@ class Switcher {
         print(status)
         
         if(status == true){
-            rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Student_TabBarViewController") as! Authentication_TabBarViewController
+            rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Authentication_TabBarViewController") as! Authentication_TabBarViewController
             
         }else{
-            rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! LoginViewController
+            rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         }
         
         //For Scene delegate. Code added to show the screens as per users login logout status

@@ -17,7 +17,7 @@ class Authentication_TabBarViewController: UITabBarController {
     
    func configureTabbar()   //- outside view did load
    {
-        self.tabBar.tintColor = .red
+        self.tabBar.tintColor = .black
         self.tabBar.isTranslucent = true
    }
 }
